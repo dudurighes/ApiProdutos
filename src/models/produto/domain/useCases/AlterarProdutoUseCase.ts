@@ -6,10 +6,10 @@ export class AlterarProdutoUseCase {
 
     constructor(private produtoRepository: ProdutoRepository) { }
 
-    async execute(codigo: string, produtoUpdate: ProdutoUpdateDto): Promise<Produto> {
+    async execute(codigo: number, produtoUpdate: ProdutoUpdateDto): Promise<Produto> {
         try {
 
-            return await this.produtoRepository.alterarProduto(, produtoUpdate)
+            return await this.produtoRepository.alterarProduto(codigo, produtoUpdate)
 
         } catch (error) {
             throw new Error("Problema ao deletar Produto")
