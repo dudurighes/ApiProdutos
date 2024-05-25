@@ -4,7 +4,7 @@ import { iesRoutes } from "../models/produto/routes/iesRoutes";
 const server = fastify()
 const PORT = 3333;
 
-server.register(iesRoutes)
+server.register(produtosRoutes)
 
 server.get('/', (request, reply) => {
     return { message: 'Você está na API da CESUL' }
